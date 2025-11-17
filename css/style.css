@@ -331,3 +331,199 @@ footer {
   .hero-btn { display: block; margin: 0.5rem auto; width: fit-content; }
   .container { padding: 0 1.2rem; }
 }
+/* === ДИАГРАММА УРОВНЕЙ === */
+.levels-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.level {
+  text-align: center;
+  min-width: 100px;
+}
+
+.level-num {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.level-name {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.level-arrow {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* === ТАБЛИЦЫ === */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.data-table th {
+  background: rgba(0, 180, 216, 0.15);
+  color: var(--accent);
+}
+
+.data-table tr:hover td {
+  background: rgba(0, 180, 216, 0.05);
+}
+
+/* === КАРТОЧКИ-ПОДБЛОКИ === */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.card-sub {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  transition: var(--transition);
+}
+
+.card-sub:hover {
+  background: rgba(0, 180, 216, 0.1);
+  transform: translateY(-3px);
+}
+
+/* === ЦИТАТЫ === */
+.quote.large {
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+/* === ТАЙМЛАЙН === */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-year {
+  flex: 0 0 120px;
+  text-align: right;
+  font-weight: 700;
+  color: var(--accent);
+  padding-right: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-content {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  position: relative;
+  border-left: 3px solid var(--accent);
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
+  left: -34px;
+  top: 1.2rem;
+}
+
+/* === ПРОФИЛИ УЧЁНЫХ === */
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 180, 216, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.profile-years {
+  color: #90e0ef;
+  font-weight: 500;
+}
+
+.profile-body p {
+  margin-bottom: 0.8rem;
+}
+
+.profile-body .quote {
+  font-style: italic;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+  .timeline::before { left: 20px; transform: none; }
+  .timeline-item { flex-direction: column; padding-left: 40px; }
+  .timeline-year { text-align: left; padding-right: 0; padding-left: 20px; }
+  .timeline-content::before { left: 6px; }
+}
