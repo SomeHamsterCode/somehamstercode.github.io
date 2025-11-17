@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Мой сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой статический сайт</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Привет! Мой первый сайт на GitHub</h1>
-    <p>Скоро здесь будет крутой блог!</p>
+    <header>
+        <h1>🚀 Мой крутой сайт</h1>
+        <p>Полностью статический - без бэкенда!</p>
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="feature">
+                <h3>📝 Блог</h3>
+                <p>Мои мысли и идеи</p>
+            </div>
+            <div class="feature">
+                <h3>📞 Контакты</h3>
+                <p>Свяжись со мной</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Проекты</h3>
+                <p>Что я создал</p>
+            </div>
+        </section>
+
+        <section class="blog-posts">
+            <h2>Последние посты</h2>
+            <div id="posts-container">
+                <!-- Посты появятся здесь -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Мой сайт. Сделано с ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
